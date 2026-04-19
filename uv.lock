@@ -1865,6 +1865,7 @@ source = { editable = "." }
 dependencies = [
     { name = "boto3" },
     { name = "fire" },
+    { name = "mlflow" },
     { name = "pandas" },
     { name = "scikit-learn" },
     { name = "setuptools" },
@@ -1903,6 +1904,7 @@ training = [
 requires-dist = [
     { name = "boto3", specifier = ">=1.42.91" },
     { name = "fire", specifier = ">=0.7.1" },
+    { name = "mlflow", specifier = ">=3.8.1" },
     { name = "pandas", specifier = "==2.3.3" },
     { name = "scikit-learn", specifier = "==1.8.0" },
     { name = "setuptools", specifier = ">=82.0.1" },

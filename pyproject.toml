@@ -8,6 +8,7 @@ dependencies = [
     "boto3>=1.42.91",
     "fire>=0.7.1",
     # TODO : Ajouter les dépendances transverses manquantes
+    "mlflow>=3.8.1",
     "pandas==2.3.3",
     "scikit-learn==1.8.0",
     "setuptools>=82.0.1",
