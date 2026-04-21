@@ -11,7 +11,7 @@ export AWS_ACCESS_KEY_ID=minio
 export AWS_SECRET_ACCESS_KEY=minio123
 
 # Renseignez bien dans la ligne ci-dessous le tag de l'image que vous souhaitez construire (repository quay.io créé au préalable)
-docker build -f ./k8s/experiment/Dockerfile -t quay.io/$$$$$/titanic/experiment:latest --build-arg MLFLOW_S3_ENDPOINT_URL=$MLFLOW_S3_ENDPOINT_URL --build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID --build-arg AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY .
-docker push quay.io/$$$$$/titanic/experiment:latest
+docker build -f ./k8s/experiment/Dockerfile -t quay.io/mamar77/titanic/experiment:latest --build-arg MLFLOW_S3_ENDPOINT_URL=$MLFLOW_S3_ENDPOINT_URL --build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID --build-arg AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY .
+docker push quay.io/mamar77/titanic/experiment:latest
 
 uv run mlflow run ../src/titanic/training -P path=all_titanic.csv --experiment-name kto-titanic --backend kubernetes --backend-config ./k8s/experiment/kubernetes_config.json
