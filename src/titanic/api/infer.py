@@ -35,7 +35,6 @@ tracer = trace.get_tracer(__name__)
 app = FastAPI()
 FastAPIInstrumentor.instrument_app(app)
 
-app = FastAPI()
 
 with open("./src/titanic/api/resources/model.pkl", "rb") as f:
     model = pickle.load(f)
