@@ -16,6 +16,11 @@ spec:
         - name: titanic-api
           image: quay.io/mamar77/titanic/api:latest
           env:
+          env:
+            - name: OTEL_SERVICE_NAME
+              value: "titanic-inference-api"
+            - name: OTEL_RESOURCE_ATTRIBUTES
+              value: "service.name=titanic-inference-api,deployment.environment=dev"
             - name: JAEGER_ENDPOINT
               value: "http://jaeger.mamar77-dev.svc.cluster.local:4318/v1/traces"
             - name: OAUTH2_DOMAIN
